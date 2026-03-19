@@ -1,0 +1,129 @@
+:host {
+  display: contents;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  width: 100%;
+  display: block;
+  color: transparent;
+  aspect-ratio: 29702 / 11437;
+}
+
+.game {
+  --cw: calc(277 / 100);
+  --ch: calc(311 / 100);
+
+  width: 100%;
+  display: block;
+  position: relative;
+  aspect-ratio: 277 / 311;
+
+  background: center / contain no-repeat url('/assets/images/manul.png');
+}
+
+/*.game .field {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30%;
+    position: absolute;
+}*/
+
+.game .field button {
+  -webkit-appearance: none;
+  border: none;
+  margin: unset;
+  padding: unset;
+  display: block;
+  color: transparent;
+  position: absolute;
+  background-color: unset;
+}
+
+.game .field button.fish {
+  left: calc(29% / var(--cw));
+  bottom: calc(38% / var(--ch));
+  width: calc(98.099% / var(--cw));
+  aspect-ratio: 98099 / 54000;
+
+  background: center / contain no-repeat url('/assets/images/fish.svg');
+}
+
+.game .field button.stake {
+  right: calc(71.67% / var(--cw));
+  bottom: calc(43.43% / var(--ch));
+  width: calc(62% / var(--cw));
+  aspect-ratio: 6200 / 4438;
+
+  background: center / contain no-repeat url('/assets/images/stake.svg');
+}
+
+.tip {
+  color: #000;
+  font-size: calc(16vw / (320 / 100));
+  font-weight: 700;
+  text-align: center;
+  line-height: normal;
+  font-family: 'Fira Sans', sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 2400 / 925;
+  padding: 5% 15%;
+
+  background: center / 80% no-repeat url('/assets/images/tip.svg');
+}
+
+.links {
+  padding: 5% 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.links a {
+  width: calc(83.669vw / (320 / 100));
+  display: block;
+  color: transparent;
+  aspect-ratio: 83669 / 87016;
+}
+
+@media (prefers-color-scheme: light) {
+  .title {
+    background: center / 90% no-repeat url('/assets/images/title.light.svg');
+  }
+
+  .links a.telegram {
+    background: center / contain no-repeat
+      url('/assets/images/telegram.light.svg');
+  }
+
+  .links a.vk {
+    background: center / contain no-repeat url('/assets/images/vk.light.svg');
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .title {
+    background: center / 90% no-repeat url('/assets/images/title.dark.svg');
+  }
+
+  .links a.telegram {
+    background: center / contain no-repeat
+      url('/assets/images/telegram.dark.svg');
+  }
+
+  .links a.vk {
+    background: center / contain no-repeat url('/assets/images/vk.dark.svg');
+  }
+}
