@@ -7,7 +7,7 @@ export class GameApp extends LitElement {
   #fetchTask = new Task(this, {
     args: () => [this.id],
     task: async ([id], { signal }) => {
-      const url = new URL('api/raffle', location)
+      const url = new URL('api/raffle', 'https://shakerquiz-raffle-bot-5f4e.twc1.net')
       url.searchParams.set('id', id)
       const response = await fetch(url, { signal })
       if (!response.ok) throw response.statusText
